@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+  /* Aquí podrías personalizar colores corporativos para tu MVP si quisieras */
+}
+
+@layer base {
+  body {
+    @apply bg-gray-50 antialiased overflow-hidden;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* Contenedor scrolleable para que el contenido no choque con el menú inferior */
+.app-content {
+  height: calc(100vh - 120px); 
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; /* Mejora el scroll en iPhone */
+}
